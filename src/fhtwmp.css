@@ -1,0 +1,16 @@
+.selfstudy > .right.side a {
+  color: white;
+}
+
+.dropdown-menu > a > i,
+.dropdown-menu > a > span {
+  color: #00689e;
+}
+
+header#page-header.row {
+  position: sticky;
+  top: 50px;
+  right: 0;
+  z-index: 99;
+  background: white;
+}
