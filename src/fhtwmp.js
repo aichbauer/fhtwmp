@@ -18,7 +18,7 @@
 // -------------------------------------------------------------------------------
 var featureToggle = {
     stickyHeader: true,
-    accordionSections: false
+    accordionSections: false,
 };
 
 // -------------------------------------------------------------------------------
@@ -52,11 +52,24 @@ if(featureToggle.stickyHeader) {
 
 function toggleAccordionOfItem(sectionBoxItem) {
     const uls = sectionBoxItem.querySelectorAll('.content > .section');
+    const lis = document.querySelectorAll('.section.main.clearfix');
+    const mainUl = document.querySelectorAll('.scfhtw.topics');
     const sectionsummaries = sectionBoxItem.querySelectorAll('.content > .sectionsummary');
 
     sectionBoxItem.classList.toggle('margin-bottom-3');
-
-    Array.from(uls, (ul) => ul.classList.toggle('hidden'));
+    Array.from(uls, (ul) => {
+      ul.classList.toggle('hidden');
+    });
+    Array.from(lis, (li) => {
+      // we need to set the elemt style because the css class is already using
+      // !important, so we cant overwrite it with another css class
+      li.style = 'margin-top: 0rem !important;padding-top: 0rem !important;';
+    });
+    Array.from(mainUl, (ul) => {
+      // we need to set the elemt style because the css class is already using
+      // !important, so we cant overwrite it with another css class
+      ul.style = 'margin-top: 8rem !important;padding-top: 8rem !important;';
+    });
     Array.from(sectionsummaries, (sectionsummary) => {
         sectionsummary.classList.toggle('d-flex'); // summary of course
         sectionsummary.classList.toggle('hidden');
