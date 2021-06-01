@@ -27,3 +27,4 @@ Visit [chrome://extensions](chrome://extensions) in your chrome web browser. Mak
 * [ ] enable No-JS Movement of items via custom button
 * [ ] reorder move left / move right button for activity horizontal movement
 * [ ] js:prompt - based add link 
+* [ ] grading overview: click highlights the line
